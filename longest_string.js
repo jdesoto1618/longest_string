@@ -4,11 +4,16 @@ function find_longest (arr) {
   if (arr.length === 0) {
     return false;
   } else if (arr.length === 1) {
-    return arr;
+    if (arr[0] == "") {
+      return "Your array is empty!";
+    } else {
+      return arr;
+    }
   }
-  //sort function highest to lowest, return first value in arr after sorting
+  //sort function from highest to lowest, return first value in arr after sorting
   var longest = arr.sort(function(a,b){
     return b.length - a.length;
   })[0];
+  //log value. This will be the longest string
   console.log(longest);
 }
