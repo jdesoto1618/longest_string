@@ -2,14 +2,15 @@
 function find_longest(arr) {
   //set length of array
   var length = arr.length;
+  // check if the array contains numbers
+  for (var i = 0; i < length; i++) {
+    if (typeof(arr[i]) === "number") {
+      return "Use string inputs only!";
+    }
+  }
   
-  // var i = 0;
-  // //check if the array contains numbers
-  // for (i; i < length; i++) {
+  // kept this line to remind myself of the wrong syntax of typeof
   //   if (typeof(arr[i] === "number")) {
-  //     return "One or more values in the array are numeric! Please pass only strings.";
-  //   }
-  // }
 
   //check if the array is empty, or has just one element
   if (length === 0) {
