@@ -1,4 +1,4 @@
-//program determines the longest string in a given array
+// determines the longest string in a given array
 function find_longest(arr) {
   //set length of array
   var length = arr.length;
@@ -9,7 +9,7 @@ function find_longest(arr) {
     }
   }
   
-  // kept this line to remind myself of the wrong syntax of typeof
+  // kept this line to remind myself of the wrong syntax for typeof
   //   if (typeof(arr[i] === "number")) {
 
   //check if the array is empty, or has just one element
@@ -23,10 +23,10 @@ function find_longest(arr) {
     }
   }
 
-  //sort function from highest to lowest, return first value in arr after sorting
+  // sort function from highest to lowest, return first value in arr after sorting
   var longest = arr.sort(function(a,b){
     return b.length - a.length;
   })[0];
-  //log value. This will be the longest string
+  // log the longest string
   console.log(longest);
 }
